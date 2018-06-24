@@ -1,7 +1,7 @@
 {
-  "name": "ExampleTicketWebServer",
+  "name": "TicketWebServer",
   "version": "0.0.1",
-  "description": "ExampleTicketWebServer",
+  "description": "TicketWebServer",
   "dependencies": {
     "express": "4.4.x",
     "ec2metadata": "0.1.x",

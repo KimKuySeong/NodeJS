@@ -9,11 +9,11 @@ var express = require('express')
   , io = require('socket.io').listen(server);
 
 var redisEndpoint = {
-  host: 'exampleticket.o5nouc.0001.apne1.cache.amazonaws.com',
+  host: 'redis-001.erzr3a.0001.apn2.cache.amazonaws.com',
   port: 6379
 };
 var rdsEndpoint = {
-  host: 'exampleticket.cnlconsezo7y.ap-northeast-1.rds.amazonaws.com',
+  host: 'mydbinstance.cua0fc4f86mo.ap-northeast-2.rds.amazonaws.com',
   port: 3306
 };
 
@@ -22,7 +22,7 @@ var publisher = redis.createClient(redisEndpoint.port, redisEndpoint.host);
 var subscriber = redis.createClient(redisEndpoint.port, redisEndpoint.host);
 
 // MySQL DB 이름, 계정, 암호
-var sequelize = new Sequelize('exampleticket', 'admin', 'adminpassword', {
+var sequelize = new Sequelize('mydbinstance', 'root', 'qnrk9anfmtl85', {
   host: rdsEndpoint.host,
   port: rdsEndpoint.port,
   maxConcurrentQuries: 1024,
